@@ -1,5 +1,5 @@
 require 'psych'
-require_relative 'yaml_tablerize'
+require 'yaml-tablerize'
 
 module Kramdown
   module Converter

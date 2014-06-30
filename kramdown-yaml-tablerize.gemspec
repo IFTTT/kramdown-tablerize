@@ -1,16 +1,25 @@
 require './lib/kramdown-yaml-tablerize/version'
 
-Gem::Specification.new do |s|
-  s.name        = 'kramdown-yaml-tablerize'
-  s.version     = Kramdown::Parser::KRAMDOWN_YAML_TABLERIZE_VERSION
-  s.date        = '2014-06-26'
-  s.add_dependency 'kramdown', '~> 1.2.0'
-  s.summary     = 'YAML to HTML tables.'
-  s.description = 'Convert YAML to HTML tables, either standalone or as a Kramdown plugin.'
-  s.authors     = ['Sean Zhu']
-  s.email       = 'sean.zhu@ifttt.com'
-  s.files       = `git ls-files`.split($/)
-  # s.homepage    = nil
-  # s.license     = nil
-  s.require_paths = ["lib"]
+Gem::Specification.new do |gem|
+  gem.name        = 'kramdown-yaml-tablerize'
+  gem.summary     = 'kramdown plugin to convert YAML to HTML tables.'
+  gem.description = <<-END
+      YAML Tablerize converts YAML to HTML Tables.
+      Say goodbye to aligning tables in Markdown.
+      This plugin allows YAML tables to be embedded
+      in kramdown Markdown.
+    END
+
+  gem.version     = Kramdown::Parser::KRAMDOWN_YAML_TABLERIZE_VERSION
+  gem.date        = '2014-06-30'
+
+  gem.homepage    = 'https://github.com/IFTTT/yaml-tablerize'
+  gem.authors     = ['Sean Zhu']
+  gem.email       = 'sean.zhu@ifttt.com'
+  # gem.license     = ''
+
+  gem.add_dependency 'kramdown', '~> 1.2', '>= 1.2.0'
+  gem.add_dependency 'yaml-tablerize', '~> 0.2', '>= 0.2.0'
+  gem.files       = `git ls-files`.split($RS)
+  gem.require_paths = ["lib"]
 end
