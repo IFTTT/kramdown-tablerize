@@ -7,17 +7,29 @@ kramdown plugin to convert YAML to HTML tables inside Markdown, using [YAML Tabl
 Usage
 -----
 
-In Ruby:
+To install:
 
-```ruby
-require 'kramdown-yaml-tablerize'
-
-compile '*.md' do
-  filter :kramdown, { :input => 'KramdownYamlTablerize' }
-end
+```shell
+cd kramdown-yaml-tablerize
+make install
 ```
 
-In Markdown:
+or (soon)
+
+```shell
+gem install kramdown-yaml-tablerize
+```
+
+Then, in Ruby:
+
+```ruby
+require 'kramdown'
+require 'kramdown-yaml-tablerize'
+
+Kramdown::Document.new(content, :input => 'KramdownYamlTablerize').to_html
+```
+
+and in Markdown:
 
 ```yaml
 --- table ---
