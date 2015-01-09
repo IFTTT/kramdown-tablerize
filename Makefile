@@ -1,4 +1,4 @@
-GEM_NAME = kramdown-yaml-tablerize
+GEM_NAME := kramdown-tablerize
 
 all:
 	gem build $(GEM_NAME).gemspec
@@ -10,6 +10,6 @@ uninstall:
 	gem uninstall $(GEM_NAME)
 
 clean:
-	rm $(GEM_NAME)-*.gem
+	rm -fv -- $(GEM_NAME)-*.gem
 
 .PHONY: all install clean

@@ -1,11 +1,11 @@
-kramdown-yaml-tablerize
-=======================
+kramdown-tablerize
+==================
 
-A [kramdown] plugin to convert YAML to HTML tables inside Markdown, using [YAML
-Tablerize].
+A [kramdown] plugin to convert YAML to HTML tables inside Markdown, using
+[Tablerize].
 
 [kramdown]: http://kramdown.gettalong.org/
-[YAML Tablerize]: https://github.com/IFTTT/yaml-tablerize
+[Tablerize]: https://github.com/szhu/tablerize
 
 
 ## Usage
@@ -13,19 +13,18 @@ Tablerize].
 To install:
 
 ```shell
-cd kramdown-yaml-tablerize
+cd kramdown-tablerize
 make install
 # or (soon)
-gem install kramdown-yaml-tablerize
+gem install kramdown-tablerize
 ```
 
 Then, in Ruby...
 
 ```ruby
-require 'kramdown'
-require 'kramdown-yaml-tablerize'
+require 'kramdown-tablerize'
 
-Kramdown::Document.new(content, :input => 'KramdownYamlTablerize').to_html
+Kramdown::Document.new(content, input: 'KramdownYamlTablerize').to_html
 ```
 
 ...and in Markdown
@@ -127,7 +126,7 @@ wow such surveillance
 The structure of [rfc1459/kramdown-gist] was used as a guideline for making this
 library.
 
-**kramdown-yaml-tablerize** was originally designed and written by [@szhu] at
+**kramdown-tablerize** was originally designed and written by [@szhu] at
 [@IFTTT].
 
 [rfc1459/kramdown-gist]: https://github.com/rfc1459/kramdown-gist
