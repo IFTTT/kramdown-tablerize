@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# Command-line interface to the kramdown-tablerize gem.
+
+if ARGV.empty?
+  $stderr.puts "usage: #{$PROGRAM_NAME} path/to/document.md [...]"
+  exit 1
+end
+
+begin
+  require_relative '../lib/kramdown-tablerize'
+rescue LoadError
+  require 'kramdown-tablerize'
+end
+
+ARGV.each do |path|
+  puts Kramdown::Document.new(File.read(path), input: 'KramdownYamlTablerize').to_html
+end

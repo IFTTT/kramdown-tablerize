@@ -1,0 +1,17 @@
+.*
+Tablerize YAML error for the following table:
+.*
+  1 
+  2 
+  3     class: \[statistics-table, nsa-surveillance-details\]
+  4 
+\* 5     cols
+  6     - name
+  7     - num_orders
+  8     - name: num_targets
+  9 
+  10     data:
+backtrace:
+.*
+could not find expected ':' while scanning a simple key at line 5 column 5
+.*
