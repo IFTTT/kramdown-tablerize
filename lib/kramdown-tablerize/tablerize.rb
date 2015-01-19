@@ -11,10 +11,11 @@ module Tablerize
       # occurred in the Markdown source.
       def self.printable_error_context(text, target_line)
         raw_lines = text.lines
-        start_line = [target_line - ERROR_CONTEXT_LINES, 0].max
-        end_line   = [target_line + ERROR_CONTEXT_LINES, lines.length - 1].min
-        fmt_lines = [start_line..end_line].map do |line|
-          "#{line} #{raw_lines[line].chomp}"
+        start_line = [target_line - ERROR_CONTEXT_LINES, 1].max
+        end_line   = [target_line + ERROR_CONTEXT_LINES, raw_lines.length].min
+        fmt_lines = (start_line..end_line).map do |line|
+          marker = line == target_line ? '*' : ' '
+          "#{marker} #{line} #{raw_lines[line - 1].chomp}"
         end
         fmt_lines.join("\n")
       end
@@ -24,9 +25,10 @@ module Tablerize
       rescue Psych::SyntaxError => e
         e.message.prepend [
           "Tablerize YAML error for the following table:",
-          printable_error_context(el, e),
-          "backtrace:"
-        ].join('\n')
+          printable_error_context(yaml_tablerize, e.line),
+          "backtrace:",
+          ''
+        ].join("\n")
         raise e
       end
     end

@@ -5,7 +5,7 @@ A [kramdown] plugin to convert YAML to HTML tables inside Markdown, using
 [Tablerize].
 
 [kramdown]: http://kramdown.gettalong.org/
-[Tablerize]: https://github.com/szhu/tablerize
+[Tablerize]: https://github.com/IFTTT/tablerize
 
 
 ## Usage
