@@ -1,6 +1,8 @@
 kramdown-tablerize
 ==================
 
+[![Build Status](https://travis-ci.org/IFTTT/kramdown-tablerize.svg)](https://travis-ci.org/IFTTT/kramdown-tablerize)
+
 ```shell
 gem install kramdown-tablerize
 ```
