@@ -10,7 +10,7 @@ module Tablerize
       # number where the error occurred in YAML won't be the same as where it
       # occurred in the Markdown source.
       def self.printable_error_context(text, target_line)
-        raw_lines = text.lines
+        raw_lines = text.lines.to_a
         start_line = [target_line - ERROR_CONTEXT_LINES, 1].max
         end_line   = [target_line + ERROR_CONTEXT_LINES, raw_lines.length].min
         fmt_lines = (start_line..end_line).map do |line|
