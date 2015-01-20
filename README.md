@@ -1,6 +1,10 @@
 kramdown-tablerize
 ==================
 
+```shell
+gem install kramdown-tablerize
+```
+
 A [kramdown] plugin to convert YAML to HTML tables inside Markdown, using
 [Tablerize].
 
@@ -10,16 +14,7 @@ A [kramdown] plugin to convert YAML to HTML tables inside Markdown, using
 
 ## Usage
 
-To install:
-
-```shell
-cd kramdown-tablerize
-make install
-# or (soon)
-gem install kramdown-tablerize
-```
-
-Then, in Ruby...
+In Ruby...
 
 ```ruby
 require 'kramdown-tablerize'
