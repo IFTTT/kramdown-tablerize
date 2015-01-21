@@ -2,10 +2,10 @@ require './lib/kramdown-tablerize/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'kramdown-tablerize'
-  gem.summary       = 'Convert YAML to HTML tables in kramdown.'
+  gem.summary       = 'Use Tablerize to convert YAML tables in Markdown to HTML.'
   gem.description   = <<-END
-      This kramdown plugin uses Tablerize to convert YAML tables in Markdown
-      to HTML.
+      A kramdown plugin to convert YAML to HTML tables inside Markdown, using
+      Tablerize.
     END
 
   gem.version       = Tablerize::Plugin::Kramdown::VERSION
