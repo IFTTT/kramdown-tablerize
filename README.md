@@ -1,6 +1,9 @@
 kramdown-tablerize
 ==================
 
+## Deprecated
+This project is not being developed. Feel free to fork!
+
 [![Build Status](https://travis-ci.org/IFTTT/kramdown-tablerize.svg)](https://travis-ci.org/IFTTT/kramdown-tablerize)
 
 ```shell
